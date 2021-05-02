@@ -4,10 +4,7 @@
   --font-light-link: #5e64b1;
   --font-light-link-hover: #1665f5;
   --font-size-m: 23px;
-  --project-1: url("../img/example.png");
-  --project-2: url("../img/example.png");
 }
-
 *,
 *::before,
 *::after {
@@ -45,28 +42,26 @@ main {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
-.folder {
+#folder {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 10px;
   justify-content: space-around;
 }
-.folder > * {
+.project {
   display: grid;
   max-width: 500px;
   min-width: 300px;
   min-height: 225px;
   max-height: 281px;
-  background-image: var(--project-2);
+  border-radius: 9px;
 }
-.project:nth-child(1) {
-  background-image: var(--project-1);
-}
-
-.folder > *::after {
-  content: attr(data-filename);
+.project > a {
   align-self: center;
   font-size: 34px;
   font-family: revert;
-  color: #6495ed87;
+  color: #2e67cd87;
+}
+.project > a:hover {
+  text-shadow: 0px 0px 17px #1e67e9;
 }
