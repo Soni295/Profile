@@ -1,0 +1,72 @@
+:root {
+  --bg-light: #e3e3e3;
+  --font-light: #333;
+  --font-light-link: #5e64b1;
+  --font-light-link-hover: #1665f5;
+  --font-size-m: 23px;
+  --project-1: url("../img/example.png");
+  --project-2: url("../img/example.png");
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body {
+  padding: 0;
+  margin: 0;
+}
+h1, h2, h3 {
+  color: var(--font-light);
+}
+a, a:hover, a:focus {
+  text-decoration: none;
+  color: var(--font-light-link);
+  outline: none;
+}
+a:hover {
+  color: var(--font-light-link-hover);
+}
+main {
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg-light);
+  color: var(--font-light);
+  padding: 1rem;
+  text-align: center;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+.description {
+  font-size: var(--font-size-m);
+}
+.intro {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.folder {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 10px;
+  justify-content: space-around;
+}
+.folder > * {
+  display: grid;
+  max-width: 500px;
+  min-width: 300px;
+  min-height: 225px;
+  max-height: 281px;
+  background-image: var(--project-2);
+}
+.project:nth-child(1) {
+  background-image: var(--project-1);
+}
+
+.folder > *::after {
+  content: attr(data-filename);
+  align-self: center;
+  font-size: 34px;
+  font-family: revert;
+  color: #6495ed87;
+}
