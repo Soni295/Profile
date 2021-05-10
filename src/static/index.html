@@ -7,47 +7,64 @@
   <link rel="stylesheet" href="/public/css/style.css">
 </head>
 <body>
-  <main>
+  <main class="main">
     <h1>Profile</h1>
-    <section class='intro'>
-      <div></div>
-      <div>
-        <h2>Portada</h2>
-        <p class='description'>full name: Sión Ramos de los Santos</p>
-        <p class='description'>
-          My Github:
-          <a
-            href="https://github.com/Soni295"
-            target="_blank"
-            rel="noreferrer noopener"
-          >Soni295
-          </a>
-        </p>
-        <p class='description'>
-          My LinkedIn:
-          <a
-            href="https://www.linkedin.com/in/sionramos/"
-            target="_blank"
-            rel="noreferrer noopener"
-          >Sion Ramos
-          </a>
-        </p>
-        <p class='description'>
-          hello my name is Sion,
-        </p>
-        <p class='description'>
-          welcome to my profile space,
-        </p>
-        <p class='description'>
-          here you can see some projects
-        </p >
+    <section class='introduction'>
+      <div class="card">
+        <h2 class="card__title">Info</h2>
+        <div class="card__body">
+          <p>Hello my name is Sion,<br>
+            I'm a React/Node Developer<br>
+            welcome to my profile space,<br>
+            here you can see some projects
+          </p >
+        </div>
+      </div>
+      <div class='card'>
+        <h2 class="card__title">Info</h2>
+        <div class="card__body">
+          <p>full name: Sión Ramos de los Santos<br>
+            My Github:
+            <a
+              href="https://github.com/Soni295"
+              target="_blank"
+              rel="noreferrer noopener"
+            >Soni295
+            </a><br>
+            My LinkedIn:
+            <a
+              href="https://www.linkedin.com/in/sionramos/"
+              target="_blank"
+              rel="noreferrer noopener"
+            >Sion Ramos
+            </a>
+          </p>
+        </div>
       </div>
     </section>
     <section>
       <h2>Projects</h2>
-      <div id="folder">
-      </div>
+      <div id="folder"></div>
     </section>
+
+    <div class="modal">
+      <div class="modal__box">
+        <div class="modal__box__carousel"></div>
+
+        <div class="modal__box__info">
+
+          <div class="modal__box__info__head">
+            <h2 id="project"></h2>
+            <span id="close-btn">x</span>
+          </div>
+
+          <div class="modal__box__info__desc">
+            <p id="short-desc"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </main>
   <script src="/public/js/index.js" type="module"></script>
 </body>

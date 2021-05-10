@@ -1,10 +1,11 @@
-const folder = document.getElementById('folder')
-import { projects } from './projects.js'
+import { projects, createProjectDiv } from './projects.js'
+import { handleModal } from './modal.js'
 
+for(const project of projects) createProjectDiv(project, handleModal)
+
+/*
 const templateProject = ({endPoint, name, img='example.png'}) => `
-<div class='project'
-  style='background-image: url("/public/img/${img}");'
->
+<div class='project' style='background-image: url("/public/img/${img}");'>
   <a
     href="https://github.com/Soni295/${endPoint}"
     target="_blank"
@@ -14,6 +15,6 @@ const templateProject = ({endPoint, name, img='example.png'}) => `
 </div>
 `
 
-folder.innerHTML = projects.reduce(
-  (acc, cur) => acc + templateProject(cur) , ''
-)
+
+
+*/

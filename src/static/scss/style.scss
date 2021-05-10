@@ -1,0 +1,76 @@
+@use 'sass:map';
+@import "color";
+@import "sizes";
+@import "modal";
+@import "global";
+
+.main {
+  background: map-get($theme-light, "bg");
+  padding: 1rem;
+  text-align: center;
+  min-height: 100vh;
+}
+
+.introduction {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  font-size: 1rem;
+
+  & .card {
+    width: 80%;
+    border-radius: 20px;
+    background-color: map-get($theme-light, "white");
+    backdrop-filter: blur(20px);
+
+    &__title {
+      font-size: 2.25em;
+    }
+
+    &__body {
+      width: 75%;
+      margin: auto;
+      height: 300px;
+
+      & > p {
+        font-size: map-get($size-font, "medium");
+        font-size: 1.75em;
+        text-align: initial;
+        letter-spacing: 1px;
+      }
+    }
+  }
+}
+
+p.nose {
+  margin: 0px 60px;
+  text-align: initial;
+  font-size: map-get($size-font, "medium");
+  letter-spacing: 1px;
+}
+
+#folder {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 10px;
+  justify-content: space-around;
+}
+
+.project {
+  display: flex;
+  max-width: 500px;
+  min-width: 300px;
+  min-height: 225px;
+  max-height: 281px;
+  border-radius: 9px;
+  justify-content: center;
+  align-items: center;
+  font-size: map-get($size-font, "large");
+  font-family: revert;
+  color: #2e67cd87;
+
+  &:hover {
+    cursor: pointer;
+    text-shadow: 0px 0px 17px #1e67e9;
+  }
+}
