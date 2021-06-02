@@ -20,8 +20,13 @@
     transform: translate(-50%, -50%);
 
     &__carousel {
+      display: grid;
+      align-items: center;
       background: map-get($theme-light, "black");
       border-radius: 0.9375rem 0 0 0.9375rem;
+      & > img {
+        width: 100%;
+      }
     }
 
     &__info {

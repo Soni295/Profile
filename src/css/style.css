@@ -20,8 +20,13 @@
   transform: translate(-50%, -50%);
 }
 .modal__box__carousel {
+  display: grid;
+  align-items: center;
   background: #222;
   border-radius: 0.9375rem 0 0 0.9375rem;
+}
+.modal__box__carousel > img {
+  width: 100%;
 }
 .modal__box__info {
   display: grid;
