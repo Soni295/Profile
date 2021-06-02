@@ -5,8 +5,8 @@
   "main": "./src/server.js",
   "scripts": {
     "start": "node ./src/server.js",
-    "Dev-sass": "sass --watch ./src/static/scss/style.scss ./src/static/css/style.css",
-    "dev": "nodemon ./src/server.js & npm run Dev-sass"
+    "Dev-sass": "sass --watch ./src/scss/style.scss ./src/css/style.css",
+    "dev": "npm run Dev-sass"
   },
   "keywords": [],
   "author": "",

@@ -1,0 +1,13 @@
+[
+  {
+    "name": "ClickArt",
+    "endPoint": "ClickArt",
+    "images": [
+      "ClickArt01.png",
+      "ClickArt02.png",
+      "ClickArt03.png"
+    ],
+    "webSite": "hola",
+    "description": "It is a rest full api art gallery style page where you can post images and search by artist name and drawing."
+  }
+]

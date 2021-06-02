@@ -6,14 +6,14 @@
   bottom: 0;
   top: 0;
   background-color: #23232382;
-  backdrop-filter: blur(2px);
+  backdrop-filter: blur(0.125rem);
 }
 .modal__box {
   display: grid;
   grid-template-columns: 5fr 2fr;
   width: 80%;
   height: 80%;
-  border-radius: 30px;
+  border-radius: 1.875rem;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -21,21 +21,21 @@
 }
 .modal__box__carousel {
   background: #222;
-  border-radius: 15px 0 0 15px;
+  border-radius: 0.9375rem 0 0 0.9375rem;
 }
 .modal__box__info {
   display: grid;
-  grid-template-rows: 50px auto 50px;
+  grid-template-rows: 3.125rem auto 3.125rem;
   background: #e3e3e3;
-  border-radius: 0 15px 15px 0;
+  border-radius: 0 0.9375rem 0.9375rem 0;
 }
 .modal__box__info__head {
   display: grid;
   grid-template-columns: 90% 10%;
 }
 .modal__box__info__head > #project {
-  margin-top: 15px;
-  margin-bottom: 10px;
+  margin-top: 0.9375rem;
+  margin-bottom: 0.625rem;
 }
 .modal__box__info__head > #close-btn {
   align-self: center;
@@ -43,18 +43,25 @@
   color: #808080;
   font-size: 2em;
   font-weight: bold;
-  padding-right: 15px;
+  padding-right: 0.9375rem;
   transition: 500ms ease-in-out;
 }
 .modal__box__info__head > #close-btn:hover {
   color: #000;
 }
 .modal__box__info__desc {
-  padding: 30px 20px;
+  padding: 1.875rem 1.25rem;
 }
 .modal__box__info__desc > p {
   text-align: initial;
-  font-size: 21px;
+  font-size: 1.3125rem;
+}
+.modal__box__info__links {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.modal__box__info__links > a > img {
+  max-width: 60px;
 }
 
 *,
@@ -116,13 +123,6 @@ a:hover {
   letter-spacing: 1px;
 }
 
-p.nose {
-  margin: 0px 60px;
-  text-align: initial;
-  font-size: 29px;
-  letter-spacing: 1px;
-}
-
 #folder {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -132,20 +132,21 @@ p.nose {
 
 .project {
   display: flex;
-  max-width: 500px;
-  min-width: 300px;
-  min-height: 225px;
-  max-height: 281px;
+  max-width: 470px;
+  height: 173px;
+  background-size: 100% 100%;
   border-radius: 9px;
   justify-content: center;
   align-items: center;
   font-size: 34px;
   font-family: revert;
   color: #2e67cd87;
+  transition: 500ms ease-in-out;
 }
 .project:hover {
   cursor: pointer;
   text-shadow: 0px 0px 17px #1e67e9;
+  box-shadow: 0px 0px 20px 6px #000000cc;
 }
 
 /*# sourceMappingURL=style.css.map */

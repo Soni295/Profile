@@ -6,14 +6,14 @@
   bottom: 0;
   top: 0;
   background-color: #23232382;
-  backdrop-filter: blur(2px);
+  backdrop-filter: blur(0.125rem);
 
   &__box {
     display: grid;
     grid-template-columns: 5fr 2fr;
     width: 80%;
     height: 80%;
-    border-radius: 30px;
+    border-radius: 1.875rem;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -21,22 +21,22 @@
 
     &__carousel {
       background: map-get($theme-light, "black");
-      border-radius: 15px 0 0 15px;
+      border-radius: 0.9375rem 0 0 0.9375rem;
     }
 
     &__info {
       display: grid;
-      grid-template-rows: 50px  auto 50px;
+      grid-template-rows: 3.125rem auto 3.125rem;
       background: map-get($theme-light, "bg");
-      border-radius: 0 15px 15px 0;
+      border-radius: 0 0.9375rem 0.9375rem 0;
 
       &__head {
         display: grid;
         grid-template-columns: 90% 10%;
 
         & > #project {
-          margin-top: 15px;
-          margin-bottom: 10px;
+          margin-top: 0.9375rem;
+          margin-bottom: 0.625rem;
         }
 
         & > #close-btn{
@@ -45,7 +45,7 @@
           color: #808080;
           font-size: 2em;
           font-weight: bold;
-          padding-right: 15px;
+          padding-right: 0.9375rem;
           transition: 500ms ease-in-out;
 
           &:hover {
@@ -54,12 +54,19 @@
         }
       }
       &__desc {
-        padding: 30px 20px;
+        padding: 1.875rem 1.25rem;
 
         & > p {
           text-align: initial;
-          font-size: 21px;
+          font-size: 1.3125rem;
         }
+      }
+      &__links {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+         & > a > img{
+           max-width: 60px;
+         }
       }
     }
   }
