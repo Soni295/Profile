@@ -1,22 +1,17 @@
-*,
-*::before,
-*::after {
+* , *::after, *::before {
   box-sizing: border-box;
-  font-family: map-get($font, "main");
-  color: map-get($theme-light, "font");
 }
+
 body {
-  padding: 0;
   margin: 0;
-}
-a, a:hover, a:focus {
-  text-decoration: none;
-  outline: none;
+  padding: 0;
+  background-color: $white;
 }
 
 a {
-  color: map-get($theme-light, "link");
-  &:hover {
-    color: map-get($theme-light, "link-hover");
+  text-decoration: none;
+
+  &:focus-visible{
+    outline: none;
   }
 }

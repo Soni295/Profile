@@ -1,0 +1,13 @@
+.introduction {
+  margin-top: 70px;
+  background-image: url(../img//backGround.jpg);
+  height: 400px;
+  background-size: 100%;
+  background-position-y: -121px;
+
+  & > h1 {
+    color: $white;
+    text-align: center;
+    font-size: 70px;
+  }
+}
