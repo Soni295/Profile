@@ -1,11 +1,14 @@
 *, *::after, *::before {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  margin: 0;
-  padding: 0;
-  background-color: #efefef;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  color: #efefef;
 }
 
 a {
@@ -56,6 +59,7 @@ a:focus-visible {
 }
 .navbar__options__phone {
   display: grid;
+  display: none;
   position: absolute;
   justify-items: center;
   grid-template-columns: 1fr;
@@ -110,16 +114,68 @@ a:focus-visible {
 }
 
 .introduction {
+  display: grid;
+  align-items: center;
   margin-top: 70px;
   background-image: url(../img//backGround.jpg);
-  height: 400px;
+  height: 600px;
   background-size: 100%;
   background-position-y: -121px;
-}
-.introduction > h1 {
-  color: #efefef;
+  background-repeat: no-repeat;
   text-align: center;
+}
+@media (max-width: 63.9375em) {
+  .introduction {
+    background-size: 100%;
+    height: 350px;
+  }
+}
+@media (max-width: 39.9375em) {
+  .introduction {
+    background-size: 600px;
+    height: 250px;
+  }
+}
+.introduction__main > h1 {
   font-size: 70px;
+}
+@media (max-width: 63.9375em) {
+  .introduction__main > h1 {
+    font-size: 50px;
+  }
+}
+@media (max-width: 39.9375em) {
+  .introduction__main > h1 {
+    font-size: 40px;
+  }
+}
+.introduction__main > h2 {
+  font-size: 50px;
+}
+@media (max-width: 63.9375em) {
+  .introduction__main > h2 {
+    font-size: 30px;
+  }
+}
+@media (max-width: 39.9375em) {
+  .introduction__main > h2 {
+    font-size: 30px;
+  }
+}
+
+.description {
+  background: #5468a2;
+  box-shadow: 0rem 0.3125rem 1.25rem 0.625rem #46578982;
+  margin-top: 30px;
+}
+.description > .row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.description > .row > p {
+  font-size: 30px;
+  margin: 10px;
 }
 
 /*# sourceMappingURL=style.css.map */

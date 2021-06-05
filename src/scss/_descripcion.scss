@@ -1,0 +1,16 @@
+.description{
+  background: $main;
+  box-shadow: 0rem 0.3125rem 1.25rem 0.625rem $main-shadow;
+  margin-top: 30px;
+
+  & > .row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & > p {
+      font-size: 30px;
+      margin: 10px;
+    }
+  }
+}
