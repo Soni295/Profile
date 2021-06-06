@@ -27,7 +27,6 @@
         @include breakpoint-down(medium) {
           font-size: 25px;
           justify-content: space-evenly;
-          color: red;
         }
         @include breakpoint-down(small) {
           font-size: 16px;

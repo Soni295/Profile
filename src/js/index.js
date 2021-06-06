@@ -1,3 +1,12 @@
+const Modal = () => {
+  const body = document.getElementsByTagName('body')[0]
+  mmm = create('div')
+  console.log(mmm)
+  console.log(body)
+}
+
+Modal()
+
 /*
 const carousel = document.getElementById('carousel')
 const closeBtn = document.getElementById('close-btn')

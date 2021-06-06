@@ -1,0 +1,77 @@
+.modal {
+  @include grid-center;
+  @include abs-center;
+  background: $glass-modal;
+  backdrop-filter: blur(3px);
+
+  &__container {
+    $radius: 20px;
+    display: grid;
+    height: 75%;
+    width: 76%;
+    grid-template-columns: 5fr 2fr;
+
+    & > #img {
+      border-radius: $radius 0 0 $radius;
+      background: $black;
+    }
+    &__info {
+      border-radius: 0 $radius $radius 0;
+      background: $light-gray;
+
+      & > .header {
+        display: grid;
+        & > span {
+          text-align: end;
+          font-size: 26px;
+          color: $dark-gray;
+          margin: 3px 11px 0 0;
+          font-weight: 700;
+          font-family: system-ui;
+          cursor: pointer;
+          transition: ease-in-out 400ms;
+
+          &:hover { color: $black; }
+        }
+      }
+
+      & > .body {
+        display: grid;
+        color: black;
+        font-size: 1rem;
+        margin: 10px 13px;
+        padding: 0 18px;
+
+        & > * {
+          font-size: 26px;
+          margin-top: 20px;
+        }
+
+        & > .title {
+          margin-top: 10px;
+          font-size: 2.1875em;
+          text-align: center;
+        }
+        & > .description {
+          color: $dark-gray2;
+        }
+
+        & > .tecnologies {
+          margin-top: 20px;
+          font-size: 20px;
+          color: $strong-blue;
+        }
+
+        & > .links {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          align-items: center;
+          justify-items: center;
+        }
+
+
+
+      }
+    }
+  }
+}

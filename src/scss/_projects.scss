@@ -9,7 +9,7 @@ main {
   & > #folder {
     display: grid;
     justify-items: center;
-    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
     margin: 10px;
     gap: 10px;
 
@@ -19,9 +19,9 @@ main {
       text-align: center;
       color: $light-gray;
       width: 100%;
-      background: $main;
       background-repeat: no-repeat;
       background-size: 100%;
+      background-position: 50% 50%;
       height: 187px;
       border-radius: 41px;
       transition: 500ms;
@@ -33,7 +33,7 @@ main {
         transform: scale(1.01);
         box-shadow: 0 0 11px 3px $main-shadow;
         color: $white;
-        text-shadow: 1px 1px 20px #0425ff;
+        text-shadow: 1px 1px 20px $strong-blue;
         cursor: pointer;
       }
     }

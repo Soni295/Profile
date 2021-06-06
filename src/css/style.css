@@ -21,7 +21,7 @@
 }
 
 body {
-  background-color: black;
+  background-color: #070707;
   color: #efefef;
 }
 
@@ -127,6 +127,79 @@ a:focus-visible {
   margin-bottom: 0.3125rem;
 }
 
+.modal {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: #2b023aa8;
+  backdrop-filter: blur(3px);
+}
+.modal__container {
+  display: grid;
+  height: 75%;
+  width: 76%;
+  grid-template-columns: 5fr 2fr;
+}
+.modal__container > #img {
+  border-radius: 20px 0 0 20px;
+  background: #070707;
+}
+.modal__container__info {
+  border-radius: 0 20px 20px 0;
+  background: #c1c1c1;
+}
+.modal__container__info > .header {
+  display: grid;
+}
+.modal__container__info > .header > span {
+  text-align: end;
+  font-size: 26px;
+  color: #767676;
+  margin: 3px 11px 0 0;
+  font-weight: 700;
+  font-family: system-ui;
+  cursor: pointer;
+  transition: ease-in-out 400ms;
+}
+.modal__container__info > .header > span:hover {
+  color: #070707;
+}
+.modal__container__info > .body {
+  display: grid;
+  color: black;
+  font-size: 1rem;
+  margin: 10px 13px;
+  padding: 0 18px;
+}
+.modal__container__info > .body > * {
+  font-size: 26px;
+  margin-top: 20px;
+}
+.modal__container__info > .body > .title {
+  margin-top: 10px;
+  font-size: 2.1875em;
+  text-align: center;
+}
+.modal__container__info > .body > .description {
+  color: #474646;
+}
+.modal__container__info > .body > .tecnologies {
+  margin-top: 20px;
+  font-size: 20px;
+  color: #0425ff;
+}
+.modal__container__info > .body > .links {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-items: center;
+}
+
 .introduction {
   display: grid;
   align-items: center;
@@ -201,7 +274,6 @@ a:focus-visible {
   #technologies > div > div > p {
     font-size: 25px;
     justify-content: space-evenly;
-    color: red;
   }
 }
 @media (max-width: 39.9375em) {
@@ -220,7 +292,7 @@ main > h2 {
 main > #folder {
   display: grid;
   justify-items: center;
-  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
   margin: 10px;
   gap: 10px;
 }
@@ -230,9 +302,9 @@ main > #folder > .project {
   text-align: center;
   color: #c1c1c1;
   width: 100%;
-  background: #5468a2;
   background-repeat: no-repeat;
   background-size: 100%;
+  background-position: 50% 50%;
   height: 187px;
   border-radius: 41px;
   transition: 500ms;

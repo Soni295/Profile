@@ -1,4 +1,3 @@
-
 .navbar {
   @include breakpoint-down(medium) {
     grid-template-columns: 1fr 2fr;
