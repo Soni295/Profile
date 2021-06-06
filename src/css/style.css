@@ -127,6 +127,20 @@ a:focus-visible {
   margin-bottom: 0.3125rem;
 }
 
+.cross {
+  text-align: end;
+  font-size: 26px;
+  color: #767676;
+  margin: 3px 11px 0 0;
+  font-weight: 700;
+  font-family: system-ui;
+  cursor: pointer;
+  transition: ease-in-out 400ms;
+}
+.cross:hover {
+  color: #070707;
+}
+
 .modal {
   display: grid;
   align-items: center;
@@ -145,29 +159,59 @@ a:focus-visible {
   width: 76%;
   grid-template-columns: 5fr 2fr;
 }
+@media (max-width: 63.9375em) {
+  .modal__container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 65% 35%;
+    height: 70%;
+    width: 90%;
+  }
+}
+@media (max-width: 39.9375em) {
+  .modal__container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
 .modal__container > #img {
+  display: grid;
   border-radius: 20px 0 0 20px;
   background: #070707;
+  width: 100%;
+  height: 100%;
+}
+@media (max-width: 63.9375em) {
+  .modal__container > #img {
+    border-radius: 20px 20px 0 0;
+  }
+}
+.modal__container > #img > div > span {
+  display: none;
+  color: #474646;
+}
+@media (max-width: 63.9375em) {
+  .modal__container > #img > div > span {
+    display: block;
+  }
+}
+.modal__container > #img > div > span:hover {
+  color: #c1c1c1;
 }
 .modal__container__info {
   border-radius: 0 20px 20px 0;
   background: #c1c1c1;
 }
+@media (max-width: 63.9375em) {
+  .modal__container__info {
+    border-radius: 0 0 20px 20px;
+  }
+}
 .modal__container__info > .header {
   display: grid;
 }
-.modal__container__info > .header > span {
-  text-align: end;
-  font-size: 26px;
-  color: #767676;
-  margin: 3px 11px 0 0;
-  font-weight: 700;
-  font-family: system-ui;
-  cursor: pointer;
-  transition: ease-in-out 400ms;
-}
-.modal__container__info > .header > span:hover {
-  color: #070707;
+@media (max-width: 63.9375em) {
+  .modal__container__info > .header > span {
+    display: none;
+  }
 }
 .modal__container__info > .body {
   display: grid;
