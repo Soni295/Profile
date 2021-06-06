@@ -77,19 +77,16 @@ const projects = [
 ]
 
 
-
-
-
-
 const createProjectDiv = ({name, images}, /*handleModal*/) => {
-  const div = document.createElement('div')
-  let p = document.createElement('p')
-  p.innerHTML = name
-  div.className = 'project'
-  div.style = `background-image: url("./img/${images[0]}");`
-  div.appendChild(p)
-  //div.onclick = () => handleModal(project)
-  document.getElementById('folder').appendChild(div)
+  const propeties =  {
+    className: 'project',
+    innerHTML: name,
+    style: `background-image: url("./img/${images[0]}");`
+  }
+
+  document
+    .getElementById('folder')
+    .appendChild(create('div', propeties))
 }
 
 for(const project of projects) createProjectDiv(project, /*handleModal*/)

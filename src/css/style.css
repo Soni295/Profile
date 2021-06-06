@@ -131,12 +131,11 @@ a:focus-visible {
   display: grid;
   align-items: center;
   margin-top: 70px;
-  background-image: url(../img//backGround.jpg);
   height: 600px;
-  background-size: 100%;
+  background-image: url(../img//backGround.jpg);
+  background-repeat: no-repeat;
   background-size: cover;
   background-position-y: -121px;
-  background-repeat: no-repeat;
   text-align: center;
 }
 @media (max-width: 63.9375em) {
@@ -151,31 +150,24 @@ a:focus-visible {
     height: 250px;
   }
 }
-.introduction__main > h1 {
-  font-size: 70px;
+.introduction__main {
+  font-size: 16px;
 }
 @media (max-width: 63.9375em) {
-  .introduction__main > h1 {
-    font-size: 50px;
+  .introduction__main {
+    font-size: 0.6875rem;
   }
 }
 @media (max-width: 39.9375em) {
-  .introduction__main > h1 {
-    font-size: 40px;
+  .introduction__main {
+    font-size: 0.5rem;
   }
+}
+.introduction__main > h1 {
+  font-size: 4.375em;
 }
 .introduction__main > h2 {
-  font-size: 50px;
-}
-@media (max-width: 63.9375em) {
-  .introduction__main > h2 {
-    font-size: 30px;
-  }
-}
-@media (max-width: 39.9375em) {
-  .introduction__main > h2 {
-    font-size: 30px;
-  }
+  font-size: 3.125em;
 }
 
 #technologies {
@@ -235,14 +227,25 @@ main > #folder {
 main > #folder > .project {
   display: grid;
   align-items: center;
-  width: 100%;
-  height: 300px;
-  background: #5468a2;
-  border-radius: 30px;
-}
-main > #folder > .project > p {
   text-align: center;
+  color: #c1c1c1;
+  width: 100%;
+  background: #5468a2;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  height: 187px;
+  border-radius: 41px;
+  transition: 500ms;
   font-size: 40px;
+  text-shadow: 1px 1px 1px #46578982;
+  transition: all 400ms ease-in-out;
+}
+main > #folder > .project:hover {
+  transform: scale(1.01);
+  box-shadow: 0 0 11px 3px #46578982;
+  color: #efefef;
+  text-shadow: 1px 1px 20px #0425ff;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=style.css.map */

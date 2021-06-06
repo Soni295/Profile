@@ -14,3 +14,19 @@ const createLink = (endPoint, type='Repository') => {
 
   return tagA
 }
+
+
+const createLink = (endPoint, type='Repository') => {
+  const tagA = create('a', {
+    target: '_blank',
+    rel: 'noreferrer noopener',
+    innerHTML: type,
+    href: type === 'Repository'
+      ? `https://github.com/Soni295/${endPoint}`
+      : `https://soni295.github.io/${endPoint}`,
+    title: type === 'Repository'
+      ? `my github repository ${name}`
+      : `page demotration ${name}`
+  })
+  return tagA
+}
