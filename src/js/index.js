@@ -1,13 +1,4 @@
-const createProjectDiv = (project, handleModal) => {
-  const {name, images} = project
-  let div = document.createElement('div')
-  div.className = 'project'
-  div.style = `background-image: url("./img/${images[0]}");`
-  div.innerHTML = name
-  div.onclick = () => handleModal(project)
-  document.getElementById('folder').appendChild(div)
-}
-
+/*
 const carousel = document.getElementById('carousel')
 const closeBtn = document.getElementById('close-btn')
 const modal = document.getElementsByClassName('modal')[0]
@@ -32,5 +23,4 @@ const handleModal = ({name, description='example', endPoint, images, webSite})=>
 
   carousel.innerHTML = `<img src="./img/${images[0]}" alt="" srcset="">`
 }
-
-for(const project of projects) createProjectDiv(project, handleModal)
+*/

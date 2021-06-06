@@ -1,16 +1,41 @@
-.description{
+#technologies {
+  position: relative;
+  width: 100%;
   background: $main;
   box-shadow: 0rem 0.3125rem 1.25rem 0.625rem $main-shadow;
   margin-top: 30px;
+  overflow: hidden;
 
-  & > .row {
+  & > div {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 200%;
 
-    & > p {
-      font-size: 30px;
-      margin: 10px;
+    &:nth-child(odd) > div {
+      animation: moveSlideshow1 15s linear infinite;
+    }
+
+    &:nth-child(even) > div {
+      animation: moveSlideshow2 15s linear infinite;
+    }
+
+    & > div {
+      display: flex;
+      width: 50%;
+      justify-content: space-around;
+
+      & > p {
+        @include breakpoint-down(medium) {
+          font-size: 25px;
+          justify-content: space-evenly;
+          color: red;
+        }
+        @include breakpoint-down(small) {
+          font-size: 16px;
+        }
+
+        font-size: 30px;
+        margin: 10px;
+      }
     }
   }
 }

@@ -1,3 +1,19 @@
+@keyframes moveSlideshow1 {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+@keyframes moveSlideshow2 {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
 *, *::after, *::before {
   box-sizing: border-box;
   margin: 0;
@@ -5,8 +21,6 @@
 }
 
 body {
-  width: 100vw;
-  height: 100vh;
   background-color: black;
   color: #efefef;
 }
@@ -120,6 +134,7 @@ a:focus-visible {
   background-image: url(../img//backGround.jpg);
   height: 600px;
   background-size: 100%;
+  background-size: cover;
   background-position-y: -121px;
   background-repeat: no-repeat;
   text-align: center;
@@ -163,19 +178,71 @@ a:focus-visible {
   }
 }
 
-.description {
+#technologies {
+  position: relative;
+  width: 100%;
   background: #5468a2;
   box-shadow: 0rem 0.3125rem 1.25rem 0.625rem #46578982;
   margin-top: 30px;
+  overflow: hidden;
 }
-.description > .row {
+#technologies > div {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  width: 200%;
 }
-.description > .row > p {
+#technologies > div:nth-child(odd) > div {
+  animation: moveSlideshow1 15s linear infinite;
+}
+#technologies > div:nth-child(even) > div {
+  animation: moveSlideshow2 15s linear infinite;
+}
+#technologies > div > div {
+  display: flex;
+  width: 50%;
+  justify-content: space-around;
+}
+#technologies > div > div > p {
   font-size: 30px;
   margin: 10px;
+}
+@media (max-width: 63.9375em) {
+  #technologies > div > div > p {
+    font-size: 25px;
+    justify-content: space-evenly;
+    color: red;
+  }
+}
+@media (max-width: 39.9375em) {
+  #technologies > div > div > p {
+    font-size: 16px;
+  }
+}
+
+main {
+  margin-top: 30px;
+}
+main > h2 {
+  text-align: center;
+  font-size: 40px;
+}
+main > #folder {
+  display: grid;
+  justify-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+  margin: 10px;
+  gap: 10px;
+}
+main > #folder > .project {
+  display: grid;
+  align-items: center;
+  width: 100%;
+  height: 300px;
+  background: #5468a2;
+  border-radius: 30px;
+}
+main > #folder > .project > p {
+  text-align: center;
+  font-size: 40px;
 }
 
 /*# sourceMappingURL=style.css.map */
