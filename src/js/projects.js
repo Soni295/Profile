@@ -1,28 +1,33 @@
 class Project {
-  constructor(name, endPoint) {
-    this.name = name
+  constructor(title, endPoint) {
+    this.title = title
     this.endPoint = endPoint
     this.images = ['example.jpg']
     this.webSite = null
+    this.technologies = ['JavaScript']
   }
+
   addImages(images) {
     this.images = images
   }
+
+  addTechnologies(arr){
+    this.technologies = arr
+  }
+
   addDesc(text){
     this.description = text
-  }
-  webSite(link){
-    this.webSite=link
   }
 }
 
 const ClickArt = new Project("ClickArt", "ClickArt")
-ClickArt.addDesc('It is a rest full api art gallery style page where you can post images and search by artist name and drawing.')
+ClickArt.addDesc('It is a rest full api art gallery style page where you can post images and search by artist title and drawing.')
 ClickArt.addImages([
   'ClickArt01.jpg',
   'ClickArt02.jpg',
   'ClickArt03.jpg'
 ])
+ClickArt.webSite = 'https://soni295.github.io/ClickArt/'
 
 const Easybank = new Project("Easybank landing page", "Easybank-landing-page")
 Easybank.addDesc('It is a landing page for practice sass')
@@ -42,6 +47,8 @@ SnakeGame.addImages([
   'SnakeGame01.jpg',
   'SnakeGame02.jpg'
 ])
+
+SnakeGame.webSite = 'https://soni295.github.io/Snake-Game'
 
 const PricingToggle = new Project("Princing Toggle", "Princing-Toggle")
 PricingToggle.addDesc('Sort practice with react')
@@ -64,7 +71,7 @@ const DogTeam = new Project("Dog team", "dog-team")
 DogTeam.addDesc('It is a page with can search breed of dog and save some in a storage')
 
 
-//  {name: "Timer", endPoint: "TimerJs"},
+//  {title: "Timer", endPoint: "TimerJs"},
 const projects = [
   ClickArt,
   SnakeGame,
@@ -77,11 +84,17 @@ const projects = [
 ]
 
 
-const createProjectDiv = ({name, images}, /*handleModal*/) => {
+const ctrlModal = CreateModal()
+
+const createProjectDiv = project => {
+
   const propeties =  {
     className: 'project',
-    innerHTML: name,
-    style: `background-image: url("./img/${images[0]}");`
+    innerHTML: project.title,
+    style: `background-image: url("./img/${project.images[0]}");`,
+    onclick: () => {
+      ctrlModal(project)
+    }
   }
 
   document
