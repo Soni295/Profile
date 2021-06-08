@@ -222,28 +222,28 @@ a:focus-visible {
 .modal__container__info > .body {
   display: grid;
   color: #070707;
-  font-size: 18px;
+  font-size: 1.125rem;
   margin: 0.625rem 0.8125rem;
   padding: 0 1.125rem;
 }
 @media (max-width: 87.4375em) {
   .modal__container__info > .body {
-    font-size: 16px;
+    font-size: 1rem;
   }
 }
 @media (max-width: 63.9375em) {
   .modal__container__info > .body {
-    font-size: 14px;
+    font-size: 0.875rem;
   }
 }
 @media (max-width: 39.9375em) {
   .modal__container__info > .body {
-    font-size: 12px;
+    font-size: 0.75rem;
   }
 }
 .modal__container__info > .body > * {
   font-size: 1.625em;
-  margin-top: 10px;
+  margin-top: 0.625rem;
 }
 .modal__container__info > .body > .title {
   margin-top: 0.625rem;

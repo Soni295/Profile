@@ -78,24 +78,24 @@
       & > .body {
         display: grid;
         color: $black;
-        $margin-between: 38px;
-        font-size: 18px;
+        $margin-between: 2.375rem;
+        font-size: 1.125rem;
         margin: 0.625rem 0.8125rem;
         padding: 0 1.125rem;
 
         @include breakpoint-down(large) {
-          font-size: 16px;
-          $margin-between: 25px;
+          font-size: 1rem;
+          $margin-between: 1.5625rem;
         }
 
         @include breakpoint-down(medium) {
-          font-size: 14px;
-          $margin-between: 17px;
+          font-size: 0.875rem;
+          $margin-between: 1.0625rem;
         }
 
         @include breakpoint-down(small) {
-          font-size: 12px;
-          $margin-between: 10px;
+          font-size: 0.75rem;
+          $margin-between: 0.625rem;
         }
 
         & > * {
