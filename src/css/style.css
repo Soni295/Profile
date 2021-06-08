@@ -129,9 +129,9 @@ a:focus-visible {
 
 .cross {
   text-align: end;
-  font-size: 26px;
+  font-size: 1.625rem;
   color: #767676;
-  margin: 3px 11px 0 0;
+  margin: 0.1875rem 0.6875rem 0 0;
   font-weight: 700;
   font-family: system-ui;
   cursor: pointer;
@@ -153,7 +153,7 @@ a:focus-visible {
   position: fixed;
   display: none;
   background: #2b023aa8;
-  backdrop-filter: blur(3px);
+  backdrop-filter: blur(0.1875rem);
   z-index: 1000;
 }
 .modal__container {
@@ -172,12 +172,12 @@ a:focus-visible {
 }
 @media (max-width: 39.9375em) {
   .modal__container {
-    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 45% 55%;
   }
 }
 .modal__container > #img {
   display: grid;
-  border-radius: 20px 0 0 20px;
+  border-radius: 1.25rem 0 0 1.25rem;
   background: #070707;
   width: 100%;
   height: 100%;
@@ -187,7 +187,7 @@ a:focus-visible {
 }
 @media (max-width: 63.9375em) {
   .modal__container > #img {
-    border-radius: 20px 20px 0 0;
+    border-radius: 1.25rem 1.25rem 0 0;
   }
 }
 .modal__container > #img > div > span {
@@ -203,12 +203,12 @@ a:focus-visible {
   color: #c1c1c1;
 }
 .modal__container__info {
-  border-radius: 0 20px 20px 0;
+  border-radius: 0 1.25rem 1.25rem 0;
   background: #c1c1c1;
 }
 @media (max-width: 63.9375em) {
   .modal__container__info {
-    border-radius: 0 0 20px 20px;
+    border-radius: 0 0 1.25rem 1.25rem;
   }
 }
 .modal__container__info > .header {
@@ -221,17 +221,32 @@ a:focus-visible {
 }
 .modal__container__info > .body {
   display: grid;
-  color: black;
-  font-size: 1rem;
-  margin: 10px 13px;
-  padding: 0 18px;
+  color: #070707;
+  font-size: 18px;
+  margin: 0.625rem 0.8125rem;
+  padding: 0 1.125rem;
+}
+@media (max-width: 87.4375em) {
+  .modal__container__info > .body {
+    font-size: 16px;
+  }
+}
+@media (max-width: 63.9375em) {
+  .modal__container__info > .body {
+    font-size: 14px;
+  }
+}
+@media (max-width: 39.9375em) {
+  .modal__container__info > .body {
+    font-size: 12px;
+  }
 }
 .modal__container__info > .body > * {
-  font-size: 26px;
-  margin-top: 20px;
+  font-size: 1.625em;
+  margin-top: 10px;
 }
 .modal__container__info > .body > .title {
-  margin-top: 10px;
+  margin-top: 0.625rem;
   font-size: 2.1875em;
   text-align: center;
 }
@@ -239,8 +254,7 @@ a:focus-visible {
   color: #474646;
 }
 .modal__container__info > .body > .technologies {
-  margin-top: 20px;
-  font-size: 20px;
+  font-size: 1.25em;
   color: #0425ff;
 }
 .modal__container__info > .body > .links {
@@ -258,7 +272,7 @@ a:focus-visible {
   background-image: url(../img//backGround.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position-y: -121px;
+  background-position: center;
   text-align: center;
 }
 @media (max-width: 63.9375em) {

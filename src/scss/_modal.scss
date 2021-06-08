@@ -1,8 +1,8 @@
 .cross {
   text-align: end;
-  font-size: 26px;
+  font-size: 1.625rem;
   color: $dark-gray;
-  margin: 3px 11px 0 0;
+  margin: 0.1875rem 0.6875rem 0 0;
   font-weight: 700;
   font-family: system-ui;
   cursor: pointer;
@@ -16,15 +16,16 @@
   position: fixed;
   display: none;
   background: $glass-modal;
-  backdrop-filter: blur(3px);
+  backdrop-filter: blur(0.1875rem);
   z-index: 1000;
 
   &__container {
-    $radius: 20px;
+    $radius: 1.25rem;
     display: grid;
     height: 75%;
     width: 76%;
     grid-template-columns: 5fr 2fr;
+
 
     @include breakpoint-down(medium) {
       grid-template-columns: 1fr;
@@ -34,9 +35,8 @@
     }
 
     @include breakpoint-down(small) {
-      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 45% 55%;
     }
-
 
     & > #img {
       display: grid;
@@ -55,9 +55,7 @@
       & > div > span {
         display: none;
         color: $dark-gray2;
-
         @include breakpoint-down(medium) { display: block; }
-
         &:hover{ color: $light-gray; }
       }
     }
@@ -79,17 +77,33 @@
 
       & > .body {
         display: grid;
-        color: black;
-        font-size: 1rem;
-        margin: 10px 13px;
-        padding: 0 18px;
+        color: $black;
+        $margin-between: 38px;
+        font-size: 18px;
+        margin: 0.625rem 0.8125rem;
+        padding: 0 1.125rem;
+
+        @include breakpoint-down(large) {
+          font-size: 16px;
+          $margin-between: 25px;
+        }
+
+        @include breakpoint-down(medium) {
+          font-size: 14px;
+          $margin-between: 17px;
+        }
+
+        @include breakpoint-down(small) {
+          font-size: 12px;
+          $margin-between: 10px;
+        }
 
         & > * {
-          font-size: 26px;
-          margin-top: 20px;
+          font-size: 1.625em;
+          margin-top: $margin-between;
         }
         & > .title {
-          margin-top: 10px;
+          margin-top: 0.625rem;
           font-size: 2.1875em;
           text-align: center;
         }
@@ -97,8 +111,7 @@
           color: $dark-gray2;
         }
         & > .technologies {
-          margin-top: 20px;
-          font-size: 20px;
+          font-size: 1.25em;
           color: $strong-blue;
         }
         & > .links {

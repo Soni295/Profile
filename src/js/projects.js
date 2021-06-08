@@ -1,25 +1,3 @@
-class Project {
-  constructor(title, endPoint) {
-    this.title = title
-    this.endPoint = endPoint
-    this.images = ['example.jpg']
-    this.webSite = null
-    this.technologies = ['JavaScript']
-  }
-
-  addImages(images) {
-    this.images = images
-  }
-
-  addTechnologies(arr){
-    this.technologies = arr
-  }
-
-  addDesc(text){
-    this.description = text
-  }
-}
-
 const ClickArt = new Project("ClickArt", "ClickArt")
 ClickArt.addDesc('It is a rest full api art gallery style page where you can post images and search by artist title and drawing.')
 ClickArt.addImages([
@@ -28,6 +6,21 @@ ClickArt.addImages([
   'ClickArt03.jpg'
 ])
 ClickArt.webSite = 'https://soni295.github.io/ClickArt/'
+ClickArt.technologies = [
+  'JavaScript',
+  'Css',
+  'Html',
+  'React',
+  'Axios',
+  'Bootstrap',
+  'React-Router-Dom',
+  'Socket.io',
+  'Express',
+  'MySql',
+  'Nodejs',
+  'Bcrypt',
+  'Jest'
+]
 
 const Easybank = new Project("Easybank landing page", "Easybank-landing-page")
 Easybank.addDesc('It is a landing page for practice sass')
@@ -40,6 +33,12 @@ Easybank.addImages([
   'EasyBank06.jpg',
   'EasyBank07.jpg'
 ])
+Easybank.technologies = [
+  'JavaScript',
+  'Sass',
+  'Css',
+  'Html',
+]
 
 const SnakeGame = new Project("Snake Game", "Snake-Game")
 SnakeGame.addDesc("It's the snake game works by listening to browser events")
@@ -49,6 +48,14 @@ SnakeGame.addImages([
 ])
 
 SnakeGame.webSite = 'https://soni295.github.io/Snake-Game'
+SnakeGame.technologies = [
+  'JavaScript',
+  'TypeScript',
+  'Css',
+  'Html',
+  'Node',
+  'Express'
+]
 
 const PricingToggle = new Project("Princing Toggle", "Princing-Toggle")
 PricingToggle.addDesc('Sort practice with react')
@@ -57,6 +64,12 @@ PricingToggle.addImages([
   'PricingToggle02.jpg',
   'PricingToggle03.jpg'
 ])
+PricingToggle.technologies = [
+  'JavaScript',
+  'Css',
+  'Html',
+  'React'
+]
 
 const InstaClon = new Project("InstaClon", "InstaClon")
 InstaClon.addDesc("it is an instagram clone web with backend")
@@ -83,23 +96,18 @@ const projects = [
   Easybank,
 ]
 
-
 const ctrlModal = CreateModal()
 
 const createProjectDiv = project => {
-
   const propeties =  {
     className: 'project',
     innerHTML: project.title,
     style: `background-image: url("./img/${project.images[0]}");`,
-    onclick: () => {
-      ctrlModal(project)
-    }
+    onclick: () => ctrlModal(project)
   }
 
   document
     .getElementById('folder')
     .appendChild(create('div', propeties))
 }
-
-for(const project of projects) createProjectDiv(project, /*handleModal*/)
+for(const project of projects) createProjectDiv(project)
