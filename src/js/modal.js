@@ -3,8 +3,8 @@ const body = document.getElementById('body')
 const img = document.getElementById('img')
 const crosses = document.getElementsByClassName('cross')
 
+const closeModal = () => modal.classList.add('fade-out')
 
-const closeModal = () => modal.style.display = 'none'
 
 window.addEventListener('keyup', ({key})=> {
   key == 'Escape' && closeModal()
@@ -29,7 +29,11 @@ const CreateModal = () => {
   const mmm = [_title, _description, hashTag, links]
   mmm.forEach(child => body.appendChild(child))
 
-  const handleModal = () => modal.style = "display: grid;"
+  const handleModal = () => {
+    modal.classList.remove('fade-out')
+    modal.classList.add('fade-in')
+    //modal.style = "display: grid;"
+  }
 
   return ({title, description, technologies, endPoint, webSite, images}) => {
     _title.innerHTML = title

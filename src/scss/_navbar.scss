@@ -3,7 +3,8 @@
     grid-template-columns: 1fr 2fr;
   }
 
-  position: absolute;
+  z-index: 30;
+  position: fixed;
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
@@ -38,10 +39,10 @@
       @include breakpoint-up(medium) {
         display: none;
       }
-
+      visibility: hidden;
       display: grid;
-      display: none; // borrar
-      position: absolute;
+      position: fixed;
+      z-index: 30;
       justify-items: center;
       grid-template-columns: 1fr;
       background-color: $main;

@@ -14,7 +14,7 @@
   @include grid-center;
   @include abs-center;
   position: fixed;
-  display: none;
+  visibility: hidden;
   background: $glass-modal;
   backdrop-filter: blur(0.1875rem);
   z-index: 1000;
