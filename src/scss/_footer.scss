@@ -19,4 +19,23 @@
       }
     }
   }
+  &__second {
+    & > a {
+      font-size: 1.25rem;
+      margin: 15px;
+      text-align: center;
+      color: $light-gray;
+      &:hover{
+        color: $white;
+      }
+    }
+  }
+
+  &__description {
+    & > p {
+      color: #ffffff54;
+
+
+    }
+  }
 }

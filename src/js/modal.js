@@ -5,7 +5,6 @@ const crosses = document.getElementsByClassName('cross')
 
 const closeModal = () => modal.classList.add('fade-out')
 
-
 window.addEventListener('keyup', ({key})=> {
   key == 'Escape' && closeModal()
 })

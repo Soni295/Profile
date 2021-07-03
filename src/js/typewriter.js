@@ -33,14 +33,18 @@ class TypeWriter {
 
     setTimeout(()=> this.typing() ,typeSpeed)
   }
-
 }
-
 
 const TypeSet = {
   element: 'text-write',
   timing: 2000,
-  msg: ["hello, I'm Sion", "estudie en tal colegio"],
+  msg: [
+    "hello, I'm Sion.",
+    "Welcome to my profile.",
+    "I'm Javascript Developer.",
+    "I work with technologies like React, Node.",
+    "In this page, i used only Javascript, html and sass.",
+  ]
 }
 
 new TypeWriter(TypeSet)

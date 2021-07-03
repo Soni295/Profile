@@ -404,15 +404,37 @@ a:focus-visible {
 }
 
 .about-me {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  grid-template-columns: 1fr 1fr;
   margin-top: 1.875rem;
   width: 100%;
   height: 300px;
 }
-.about-me > h2 {
+@media (max-width: 39.9375em) {
+  .about-me {
+    grid-template-columns: 1fr;
+    grid-template-row: 1fr 1fr;
+  }
+}
+.about-me > a {
+  color: #efefef;
+  background: #5468a2;
+  border-radius: 34px;
   text-align: center;
+  font-size: 30px;
+  width: 150px;
+  align-self: center;
+  border: 1px solid #0425ff;
+  padding: 8px 10px;
+  transition: 600ms;
+}
+.about-me > a:hover {
+  background: #650082;
+  box-shadow: 0 0 12px 0px #0425ff;
+}
+.about-me > h2 {
   border-right: solid 1px #efefef;
 }
 .about-me > h2 > span {
@@ -437,6 +459,18 @@ a:focus-visible {
 }
 .footer__first .icon:hover {
   box-shadow: 0px 0px 7px 3px #759eff;
+}
+.footer__second > a {
+  font-size: 1.25rem;
+  margin: 15px;
+  text-align: center;
+  color: #c1c1c1;
+}
+.footer__second > a:hover {
+  color: #efefef;
+}
+.footer__description > p {
+  color: #ffffff54;
 }
 
 main {
