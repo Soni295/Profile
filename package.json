@@ -5,17 +5,18 @@
   "main": "./src/server.js",
   "scripts": {
     "start": "node ./src/server.js",
+    "build": "tsc",
     "Dev-sass": "sass --watch ./src/scss/style.scss ./src/css/style.css",
     "dev": "npm run Dev-sass"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "express": "^4.17.1"
-  },
+  "dependencies": {},
   "devDependencies": {
     "nodemon": "^2.0.7",
-    "sass": "^1.32.12"
+    "express": "^4.17.1",
+    "sass": "^1.32.12",
+    "typescript": "^5.3.3"
   }
 }
