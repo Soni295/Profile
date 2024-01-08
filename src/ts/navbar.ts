@@ -1,18 +1,15 @@
-const hamburger = document.getElementById('hamburger')
-const movilBar = document.getElementById('navbar-phone')
+class NavBarHandler {
+  private hamburger = document.getElementById('hamburger') as HTMLDivElement
+  private movilBar = document.getElementById('navbar-phone') as HTMLDivElement
 
-hamburger.onclick = () => {
-  console.log(movilBar.classList.contains('fade-out'))
-  switch(true){
-    case movilBar.classList.contains('fade-out'):
-      movilBar.classList.remove('fade-out')
-      movilBar.classList.add('fade-in')
-      break
-    case movilBar.classList.contains('fade-in'):
-      movilBar.classList.remove('fade-in')
-      movilBar.classList.add('fade-out')
-      break
-    default:
-      movilBar.classList.add('fade-in')
+  constructor() {
+    this.movilBar.classList.add('fade-out')
+
+    this.hamburger.onclick = () => {
+      this.movilBar.classList.toggle('fade-out')
+      this.movilBar.classList.toggle('fade-in')
+    }
   }
 }
+
+export const navBarHandler = new NavBarHandler()

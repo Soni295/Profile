@@ -1,103 +1,82 @@
-const ClickArt = new Project("ClickArt", "ClickArt")
-ClickArt.addDesc('It is a rest full api art gallery style page where you can post images and search by artist title and drawing.')
-ClickArt.addImages([
-  'ClickArt01.jpg',
-  'ClickArt02.jpg',
-  'ClickArt03.jpg'
-])
-ClickArt.webSite = 'https://soni295.github.io/ClickArt/'
-ClickArt.technologies = [
-  'JavaScript',
-  'Css',
-  'Html',
-  'React',
-  'Axios',
-  'Bootstrap',
-  'React-Router-Dom',
-  'Socket.io',
-  'Express',
-  'MySql',
-  'Nodejs',
-  'Bcrypt',
-  'Jest'
-]
+import { TProjectInfo, exampleProject } from "./staticInfo"
 
-const Easybank = new Project("Easybank landing page", "Easybank-landing-page")
-Easybank.addDesc('It is a landing page for practice sass')
-Easybank.addImages([
-  'EasyBank01.jpg',
-  'EasyBank02.jpg',
-  'EasyBank03.jpg',
-  'EasyBank04.jpg',
-  'EasyBank05.jpg',
-  'EasyBank06.jpg',
-  'EasyBank07.jpg'
-])
-Easybank.technologies = [
-  'JavaScript',
-  'Sass',
-  'Css',
-  'Html',
-]
+type TUpdateModal = (p: TProjectInfo) => void
 
-const SnakeGame = new Project("Snake Game", "Snake-Game")
-SnakeGame.addDesc("It's the snake game works by listening to browser events")
-SnakeGame.addImages([
-  'SnakeGame01.jpg',
-  'SnakeGame02.jpg'
-])
+export function createModalProject(project: TProjectInfo, updateModal: TUpdateModal) {
+  const folder = document.getElementById('folder') as HTMLDivElement
 
-SnakeGame.webSite = 'https://soni295.github.io/Snake-Game'
-SnakeGame.technologies = [
-  'JavaScript',
-  'TypeScript',
-  'Css',
-  'Html',
-  'Node',
-  'Express'
-]
+  const projectElement = Object.assign(document.createElement('div'), {
+    className: 'project',
+    innerHTML: project.name,
+    onclick: () => updateModal(project)
+  })
+  projectElement.style.setProperty('background-image', `./img/${project.images[0]}`)
 
-const PricingToggle = new Project("Princing Toggle", "Princing-Toggle")
-PricingToggle.addDesc('Sort practice with react')
-PricingToggle.addImages([
-  'PricingToggle01.jpg',
-  'PricingToggle02.jpg',
-  'PricingToggle03.jpg'
-])
-PricingToggle.technologies = [
-  'JavaScript',
-  'Css',
-  'Html',
-  'React'
-]
+  folder.appendChild(projectElement)
+}
+/*
+class ModalTitle {
+  private title: HTMLHeadingElement = document.createElement('h2')
 
-const InstaClon = new Project("InstaClon", "InstaClon")
-InstaClon.addDesc("it is an instagram clone web with backend")
+  constructor(text: string, className: string) {
+    this.title.className = className
+    this.updateText(text)
+  }
 
-const ReplacePxForRem = new Project("Replace px for rem", "ReplacePxForRem")
-ReplacePxForRem.addDesc('It is a tool that you create to change all the values of a px repository for their equivalence in rem')
+  updateText(text: string) {
+    this.title.innerText = text
+  }
+}
+function makeElement(type: keyof HTMLElementTagNameMap) {
+  return document.createElement(type)
+}
 
-const ChatServer = new Project("Chat Server", "Chat-ts")
-ChatServer.addDesc('It is a group chat room. testing typescript')
+class SimpleHTMLHandler {
+  private element: HTMLElement
 
-const DogTeam = new Project("Dog team", "dog-team")
-DogTeam.addDesc('It is a page with can search breed of dog and save some in a storage')
+  constructor(element: HTMLElement, text: string, className: string) {
+    this.element = element
+    this.element.className = className
+    this.updateText(text)
+  }
+
+  updateText(text: string) {
+    this.element.innerText = text
+  }
+}
 
 
-//  {title: "Timer", endPoint: "TimerJs"},
-const projects = [
-  ClickArt,
-  SnakeGame,
-//  InstaClon,
-//  ReplacePxForRem,
-//  ChatServer,
-//  DogTeam,
-  PricingToggle,
-  Easybank,
-]
 
+export function createModal(project: TProjectInfo = exampleProject) {
+  const title = new SimpleHTMLHandler(makeElement('h2'), project.name, 'description')
+  //const title = new ModalTitle(project.name)
+
+
+  const repository = createLink(project.githubRepoUrl)
+
+  let page = document.createDocumentFragment()
+
+  if (project.githubPageUrl) {
+    const link = createLink(project.githubPageUrl)
+    page.appendChild(link)
+  }
+
+
+}
+
+function createLink(url: string) {
+  const link = Object.assign(document.createElement('a'), {
+    target: "_blank", rel: "noreferrer noopener",
+    href: url
+  })
+  return link
+}
+/*
+*/
+
+/*
+/*
 const ctrlModal = CreateModal()
-
 const createProjectDiv = project => {
   const propeties =  {
     className: 'project',
@@ -111,3 +90,4 @@ const createProjectDiv = project => {
     .appendChild(create('div', propeties))
 }
 for(const project of projects) createProjectDiv(project)
+*/

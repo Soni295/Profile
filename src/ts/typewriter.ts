@@ -1,5 +1,25 @@
-const typeSpan = create('span', {innerHTML: 'hola'})
 
+class TypeWriter {
+  private element = document.getElementById('text-write')
+  private wordIndex = 0
+  private txt = ''
+  private msg: string[] = []
+
+}
+
+class Typer {
+  private typer = document.createElement('span')
+  constructor() {  }
+
+  write(msg: string) {
+    this.typer.innerHTML = msg
+  }
+}
+
+
+//
+//const typeSpan = create('span', {innerHTML: 'hola'})
+/*
 class TypeWriter {
   constructor({element, msg, timing}){
     this.element = document.getElementById(element)
@@ -48,3 +68,5 @@ const TypeSet = {
 }
 
 new TypeWriter(TypeSet)
+*/
+console.log("ho")

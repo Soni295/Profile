@@ -1,47 +1,47 @@
-const modal = document.getElementById('modal')
-const body = document.getElementById('body')
-const img = document.getElementById('img')
-const crosses = document.getElementsByClassName('cross')
+import { getElementById } from "./utils"
+import { TProjectInfo } from "./staticInfo"
 
-const closeModal = () => modal.classList.add('fade-out')
+class HandlerModal {
 
-window.addEventListener('keyup', ({key})=> {
-  key == 'Escape' && closeModal()
-})
+  private crosses = document.querySelectorAll('span.cross')
 
+  private modal = getElementById('modal')
+  private title = getElementById(`modal__body__title`)
+  private img = getElementById('img')
+  private desc = getElementById(`modal__body__description`)
+  private tech = getElementById(`modal__body__technologies`)
+  private repositoryPage = getElementById(`modal__body__repository-page`)
+  private demoPage = getElementById(`modal__body__demo-page`)
 
-for(const cross of crosses) cross.onclick = () => closeModal()
+  constructor() {
+    window.document.addEventListener('keyup', ({ key }) => {
+      key == 'Escape' && this.close()
+    })
 
-const CreateModal = () => {
-
-  const _title = create('h2', {innerHTML: 'Example1', className:'title'})
-  const _description = create('p', {innerHTML: 'example', className:'description'})
-  const a = { target:"_blank", rel:"noreferrer noopener" }
-
-  const hashTag = create('p', {innerHTML: '#JavaScript', className:'technologies'})
-  const repository = create('a', {innerHTML: 'My repository',  href: '#', ...a})
-  const page = create('a', {innerHTML: 'Demo Page',id: 'Demo Page', href: '#', ...a})
-  const links = create('div', {className: 'links'}, [repository, page])
-
-  const github = 'https://github.com/Soni295/'
-
-  const mmm = [_title, _description, hashTag, links]
-  mmm.forEach(child => body.appendChild(child))
-
-  const handleModal = () => {
-    modal.classList.remove('fade-out')
-    modal.classList.add('fade-in')
-    //modal.style = "display: grid;"
+    for (const cross of this.crosses) {
+      cross.onclick = () => this.close()
+    }
   }
 
-  return ({title, description, technologies, endPoint, webSite, images}) => {
-    _title.innerHTML = title
-    _description.innerHTML = description
-    hashTag.innerHTML = technologies.reduce((acc, cur) => acc +`#${cur} `  , '')
-    page.style = webSite === null ? 'display: none;' : 'display: block;'
-    page.href = webSite
-    img.style.backgroundImage = `url(./img/${images[0]})`
-    repository.href = github + endPoint
-    handleModal()
+  update(project: TProjectInfo) {
+    this.title.innerText = project.name
+    this.desc.innerText = project.description
+    this.tech.innerText = project.technologies.map(tech => "#" + tech).join(" ")
+    this.repositoryPage.innerText = project.githubRepoUrl
+    if (project.githubPageUrl) {
+      this.demoPage.innerText = project.githubPageUrl
+    }
+    this.open()
+  }
+
+  private open() {
+    this.modal.classList.remove('fade-out')
+    this.modal.classList.add('fade-in')
+  }
+
+  private close() {
+    this.modal.classList.add('fade-out')
   }
 }
+
+export const handlerModal = new HandlerModal()
