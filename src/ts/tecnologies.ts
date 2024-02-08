@@ -1,3 +1,4 @@
+/*
 const tecno = document.getElementById('technologies')
 const technologies = [
   ['JavaScript', 'TypeScript', 'Python', 'Bash'],
@@ -13,3 +14,4 @@ technologies.forEach( arr => {
   const row = create('div', {}, [first, second])
   tecno.appendChild(row)
 })
+*/

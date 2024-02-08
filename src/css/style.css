@@ -157,7 +157,7 @@ html {
   text-align: center;
   color: #c1c1c1;
 }
-.navbar__options__phone > a:nth-child(2n + 1) {
+.navbar__options__phone > a:nth-child(2n+1) {
   margin: 0.9375rem 0;
 }
 .navbar__options__phone > a:hover {

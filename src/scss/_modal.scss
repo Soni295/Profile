@@ -1,0 +1,134 @@
+.cross {
+  text-align: end;
+  font-size: 1.625rem;
+  color: $dark-gray;
+  margin: 0.1875rem 0.6875rem 0 0;
+  font-weight: 700;
+  font-family: system-ui;
+  cursor: pointer;
+  transition: ease-in-out 400ms;
+  &:hover {
+    color: $black;
+  }
+}
+
+.modal {
+  @include grid-center;
+  @include abs-center;
+  position: fixed;
+  visibility: hidden;
+  background: $glass-modal;
+  backdrop-filter: blur(0.1875rem);
+  z-index: 1000;
+
+  &__container {
+    $radius: 1.25rem;
+    display: grid;
+    height: 75%;
+    width: 76%;
+    grid-template-columns: 5fr 2fr;
+
+    @include breakpoint-down(medium) {
+      grid-template-columns: 1fr;
+      grid-template-rows: 65% 35%;
+      height: 70%;
+      width: 90%;
+    }
+
+    @include breakpoint-down(small) {
+      grid-template-rows: 45% 55%;
+    }
+
+    & > #img {
+      display: grid;
+      border-radius: $radius 0 0 $radius;
+      background: $black;
+      width: 100%;
+      height: 100%;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+
+      @include breakpoint-down(medium) {
+        border-radius: $radius $radius 0 0;
+      }
+
+      & > div > span {
+        display: none;
+        color: $dark-gray2;
+        @include breakpoint-down(medium) {
+          display: block;
+        }
+        &:hover {
+          color: $light-gray;
+        }
+      }
+    }
+
+    &__info {
+      border-radius: 0 $radius $radius 0;
+      background: $light-gray;
+
+      @include breakpoint-down(medium) {
+        border-radius: 0 0 $radius $radius;
+      }
+
+      & > .header {
+        display: grid;
+        & > span {
+          @include breakpoint-down(medium) {
+            display: none;
+          }
+        }
+      }
+
+      & > .body {
+        display: grid;
+        color: $black;
+        $margin-between: 2.375rem;
+        font-size: 1.125rem;
+        margin: 0.625rem 0.8125rem;
+        padding: 0 1.125rem;
+
+        @include breakpoint-down(large) {
+          font-size: 1rem;
+          $margin-between: 1.5625rem;
+        }
+
+        @include breakpoint-down(medium) {
+          font-size: 0.875rem;
+          $margin-between: 1.0625rem;
+        }
+
+        @include breakpoint-down(small) {
+          font-size: 0.75rem;
+          $margin-between: 0.625rem;
+        }
+
+        & > * {
+          font-size: 1.625em;
+          margin-top: $margin-between;
+        }
+        & > .title {
+          margin-top: 0.625rem;
+          font-size: 2.1875em;
+          text-align: center;
+        }
+        & > .description {
+          color: $dark-gray2;
+        }
+        & > .technologies {
+          font-size: 1.25em;
+          color: $strong-blue;
+        }
+        & > .links {
+          display: flex;
+          & > a {
+            flex-grow: 1;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+}

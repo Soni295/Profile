@@ -1,0 +1,40 @@
+.about-me {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 1.875rem;
+  width: 100%;
+  height: 300px;
+
+  @include breakpoint-down(small) {
+    grid-template-columns: 1fr;
+    grid-template-row: 1fr 1fr;
+  }
+
+  & > a {
+    color: $white;
+    background: $main;
+    border-radius: 34px;
+    text-align: center;
+    font-size: 30px;
+    width: 150px;
+    align-self: center;
+    border: 1px solid $strong-blue;
+    padding: 8px 10px;
+    transition: 600ms;
+    &:hover {
+      background: $secondary-violet;
+      box-shadow: 0 0 12px 0px $strong-blue;
+    }
+  }
+
+  & > h2 {
+    border-right: solid 1px $white;
+
+    & > span {
+      border-right: 0.2rem solid $white;
+      animation: flash 1000ms infinite;
+    }
+  }
+}
