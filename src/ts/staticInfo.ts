@@ -123,7 +123,7 @@ const omit = ["InstaClon", "Replace px for rem", "Chat Server", "Dog team"];
 
 export const staticInfoVisible = staticInfo
   .map((p) => {
-    p.images = p.images.map((img) => `./img/${img}`);
+    p.images = p.images.map((img) => `./src/img/${img}`);
     return p;
   })
   .filter((p) => !omit.includes(p.name));

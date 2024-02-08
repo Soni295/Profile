@@ -5,9 +5,10 @@
   "main": "./src/server.js",
   "scripts": {
     "start": "node ./src/server.js",
-    "build": "tsc",
-    "Dev-sass": "sass --watch ./src/scss/style.scss ./src/css/style.css",
-    "dev:sass": "npm run Dev-sass",
+    "dev:sass": "sass --watch ./src/scss/style.scss ./src/css/style.css",
+    "build:sass": "sass ./src/scss/style.scss ./src/css/style.css",
+    "build:bundle": "rollup --config rollup.config.js --configPlugin typescript",
+    "build:gh-pages": "npm run build:sass && npm run build:bundle && rm -r ./src/ts/ ./src/scss/",
     "dev": "rollup --watch --config rollup.config.js --configPlugin typescript"
   },
   "keywords": [],
