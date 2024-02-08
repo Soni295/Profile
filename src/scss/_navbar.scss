@@ -57,11 +57,11 @@
         text-align: center;
         color: $light-gray;
 
-        &:nth-child(2n+1){
+        &:nth-child(2n + 1) {
           margin: 0.9375rem 0;
         }
 
-        &:hover{
+        &:hover {
           color: $white;
         }
       }
@@ -72,7 +72,7 @@
       text-align: center;
       color: $light-gray;
 
-      &:hover{
+      &:hover {
         color: $white;
       }
     }
@@ -87,7 +87,7 @@
     justify-self: end;
 
     & > span {
-      &:not(:last-child){
+      &:not(:last-child) {
         margin-bottom: 0.3125rem;
       }
 

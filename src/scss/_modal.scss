@@ -7,7 +7,9 @@
   font-family: system-ui;
   cursor: pointer;
   transition: ease-in-out 400ms;
-  &:hover { color: $black; }
+  &:hover {
+    color: $black;
+  }
 }
 
 .modal {
@@ -54,8 +56,12 @@
       & > div > span {
         display: none;
         color: $dark-gray2;
-        @include breakpoint-down(medium) { display: block; }
-        &:hover { color: $light-gray; }
+        @include breakpoint-down(medium) {
+          display: block;
+        }
+        &:hover {
+          color: $light-gray;
+        }
       }
     }
 
@@ -70,7 +76,9 @@
       & > .header {
         display: grid;
         & > span {
-          @include breakpoint-down(medium) { display: none; }
+          @include breakpoint-down(medium) {
+            display: none;
+          }
         }
       }
 
@@ -114,10 +122,11 @@
           color: $strong-blue;
         }
         & > .links {
-          display: grid;
-          grid-template-columns: 1fr 1fr;
-          align-items: center;
-          justify-items: center;
+          display: flex;
+          & > a {
+            flex-grow: 1;
+            text-align: center;
+          }
         }
       }
     }

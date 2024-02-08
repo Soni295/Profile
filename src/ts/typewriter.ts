@@ -1,21 +1,18 @@
-
 class TypeWriter {
-  private element = document.getElementById('text-write')
-  private wordIndex = 0
-  private txt = ''
-  private msg: string[] = []
-
+  private element = document.getElementById("text-write");
+  private wordIndex = 0;
+  private txt = "";
+  private msg: string[] = [];
 }
 
 class Typer {
-  private typer = document.createElement('span')
-  constructor() {  }
+  private typer = document.createElement("span");
+  constructor() {}
 
   write(msg: string) {
-    this.typer.innerHTML = msg
+    this.typer.innerHTML = msg;
   }
 }
-
 
 //
 //const typeSpan = create('span', {innerHTML: 'hola'})
@@ -69,4 +66,4 @@ const TypeSet = {
 
 new TypeWriter(TypeSet)
 */
-console.log("ho")
+console.log("ho");

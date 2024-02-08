@@ -1,4 +1,6 @@
-* , *::after, *::before {
+*,
+*::after,
+*::before {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -10,10 +12,13 @@ body {
 a {
   text-decoration: none;
 
-  &:focus-visible{
+  &:focus-visible {
     outline: none;
   }
 }
 .link {
   transition: 400ms;
+}
+html {
+  scroll-behavior: smooth;
 }

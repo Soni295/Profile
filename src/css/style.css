@@ -1,4 +1,6 @@
-*, *::after, *::before {
+*,
+*::after,
+*::before {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -18,6 +20,10 @@ a:focus-visible {
 
 .link {
   transition: 400ms;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 .has-fade {
@@ -315,10 +321,11 @@ a:focus-visible {
   color: #0425ff;
 }
 .modal__container__info > .body > .links {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-  justify-items: center;
+  display: flex;
+}
+.modal__container__info > .body > .links > a {
+  flex-grow: 1;
+  text-align: center;
 }
 
 .introduction {

@@ -7,7 +7,8 @@
     "start": "node ./src/server.js",
     "build": "tsc",
     "Dev-sass": "sass --watch ./src/scss/style.scss ./src/css/style.css",
-    "dev": "npm run Dev-sass"
+    "dev:sass": "npm run Dev-sass",
+    "dev": "rollup --watch --config rollup.config.js --configPlugin typescript"
   },
   "keywords": [],
   "author": "",
